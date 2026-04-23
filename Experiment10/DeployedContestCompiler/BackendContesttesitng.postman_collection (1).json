@@ -1,0 +1,458 @@
+{
+  "info": {
+    "_postman_id": "ab3996e5-b110-4e6d-a6b3-b84c87e09d0e",
+    "name": "BackendContesttesitng",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52398163",
+    "_collection_link": "https://go.postman.co/collection/39152695-ab3996e5-b110-4e6d-a6b3-b84c87e09d0e?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "contest created",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"type\": \"user.created\",\r\n  \"data\": {\r\n    \"id\": \"test_clerk_id_123\",\r\n    \"email_addresses\": [\r\n      { \"email_address\": \"test@example.com\" }\r\n    ],\r\n    \"first_name\": \"Test\",\r\n    \"last_name\": \"User\",\r\n    \"image_url\": \"https://example.com/avatar.png\"\r\n  }\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/clerk-webhook",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "clerk-webhook"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "approve-participant",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j577bja3z2v3ggsh4fftv7zvdh829rte\",\r\n  \"userId\": \"j9747p0tf8c7dwv0fzvetd19bn82805v\",\r\n  \"organizerId\": \"j975m59ryd6287rnxvgkts8my98282db\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/approve-participant",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "approve-participant"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-lobby",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j57evac3sbbxt4v1bq0qxzpqsh8296yt\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/get-lobby",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "get-lobby"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "request-join",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j577bja3z2v3ggsh4fftv7zvdh829rte\",\r\n  \"joinCode\": \"U6KVUO\",\r\n  \"userId\": \"j9747p0tf8c7dwv0fzvetd19bn82805v\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/request-join",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "request-join"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-contest",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"title\": \"DSA Mega Contest\",\r\n  \"description\": \"Backend Testing Contest\",\r\n  \"startTime\": 1710000000000,\r\n  \"duration\": 60,\r\n  \"organizerId\": \"j975m59ryd6287rnxvgkts8my98282db\",\r\n  \"wrongSubmissionPenalty\": 10,\r\n  \"allowedLanguages\": [\"cpp\", \"java\", \"python\"]\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/create-contest",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "create-contest"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "SYNC ORGANIZER/user",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"clerkId\": \"clerk_456\",\r\n  \"email\": \"user@gmail.com\",\r\n  \"name\": \"Ayush Participant\",\r\n  \"image\": \"\",\r\n  \"currentRole\": \"participant\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/sync-user",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "sync-user"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "start-contest",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j577bja3z2v3ggsh4fftv7zvdh829rte\",\r\n  \"organizerId\": \"j975m59ryd6287rnxvgkts8my98282db\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/start-contest",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "start-contest"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-problem",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j577bja3z2v3ggsh4fftv7zvdh829rte\",\r\n  \"pCode\": \"A1\",\r\n  \"title\": \"Addition Problem\",\r\n  \"description\": \"Return sum of two numbers\",\r\n  \"timeLimit\": 1,\r\n  \"memoryLimit\": 256,\r\n  \"sampleIO\": [\r\n    {\r\n      \"input\": \"2 3\",\r\n      \"output\": \"5\"\r\n    }\r\n  ],\r\n  \"hiddenTestCases\": [\r\n    {\r\n      \"input\": \"5 5\",\r\n      \"output\": \"10\"\r\n    }\r\n  ],\r\n  \"points\": 100,\r\n  \"level\": \"easy\",\r\n  \"order\": \"1\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/create-problem",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "create-problem"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-problems",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j577bja3z2v3ggsh4fftv7zvdh829rte\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/get-problems",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "get-problems"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "single-get-problem",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"problemId\": \"jh79wkszr774kv6nm2jrgw5m7x828jra\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/get-problem",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "get-problem"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create-standing",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j577bja3z2v3ggsh4fftv7zvdh829rte\",\r\n  \"userId\": \"j9747p0tf8c7dwv0fzvetd19bn82805v\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/create-standing",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "create-standing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "update-standing",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j57evac3sbbxt4v1bq0qxzpqsh8296yt\",\r\n  \"userId\": \"j977pgn9a60g4jx3xd1bdn97vh828dxd\",\r\n  \"pointsToAdd\": 100\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/update-standing",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "update-standing"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get-standings",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j57evac3sbbxt4v1bq0qxzpqsh8296yt\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/get-standings",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "get-standings"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "end-contest",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j57evac3sbbxt4v1bq0qxzpqsh8296yt\",\r\n  \"organizerId\": \"j9700f4tj9y1kxgq8yypmwhb89829av9\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/end-contest",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "end-contest"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "submit",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"contestId\": \"j577bja3z2v3ggsh4fftv7zvdh829rte\",\r\n  \"problemId\": \"jh74nt62yvbpmzx4wjx5d1zta1828tdx\",\r\n  \"userId\": \"j9747p0tf8c7dwv0fzvetd19bn82805v\",\r\n  \"code\": \"10\",\r\n  \"language\": \"cpp\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://focused-donkey-989.convex.site/submit",
+          "protocol": "https",
+          "host": [
+            "focused-donkey-989",
+            "convex",
+            "site"
+          ],
+          "path": [
+            "submit"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
